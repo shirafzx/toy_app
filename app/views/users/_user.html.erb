@@ -8,10 +8,14 @@
     <strong>Email:</strong>
     <%= user.email %>
   </p>
-
   <p>
     <strong>Microposts:</strong>
-    <%= user.microposts.first.content %>
+    <% if user.microposts.present? %>
+      <%= user.microposts.first.content %>
+    <% else %>
+      No microposts available.
+    <% end %>
   </p>
+  
 
 </div>
